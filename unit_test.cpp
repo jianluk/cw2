@@ -4,70 +4,70 @@
 
 using namespace ExactArithmetic;
 
-BOOST_AUTO_TEST_CASE(addition_testing)
+BOOST_AUTO_TEST_CASE(addition)
 {
 
-	std::istringstream xstr("1/10");
-	std::istringstream ystr("1/10");
+	std::istringstream n1("1/10");
+	std::istringstream n2("1/10");
 
-	Rational x, y;
-	xstr >> x;
-	ystr >> y;
+	Rational a, b;
+	n1 >> a;
+	n2 >> b;
 
 	Rational result = Rational("1/5");
 
 	// Check equality of the results of two expressions
-	BOOST_CHECK_EQUAL((x + y), result);
+	BOOST_CHECK_EQUAL((a + b), result);
 
 }
 
-BOOST_AUTO_TEST_CASE(c_testing)
+BOOST_AUTO_TEST_CASE(minus)
 {
 
-	std::istringstream xstr("3/4");
-	std::istringstream ystr("2/4");
+	std::istringstream n1("1/10");
+	std::istringstream n2("1/10");
 
-	Rational x, y;
-	xstr >> x;
-	ystr >> y;
+	Rational a, b;
+	n1 >> a;
+	n2 >> b;
 
 	Rational result = Rational("1/4");
 
 	// Check equality of the results of two expressions
-	BOOST_CHECK_EQUAL((x - y), result);
+	BOOST_CHECK_EQUAL((a - b), result);
 
 }
 
-BOOST_AUTO_TEST_CASE(a_testing)
+BOOST_AUTO_TEST_CASE(multiply)
 {
 
-	std::istringstream xstr("1/3");
-	std::istringstream ystr("1/3");
+	std::istringstream n1("1/10");
+	std::istringstream n2("1/10");
 
-	Rational x, y;
-	xstr >> x;
-	ystr >> y;
+	Rational a, b;
+	n1 >> a;
+	n2 >> b;
 
 	Rational result = Rational("1/9");
 
 	// Check equality of the results of two expressions
-	BOOST_CHECK_EQUAL((x * y), result);
+	BOOST_CHECK_EQUAL((a * b), result);
 
 }
 
-BOOST_AUTO_TEST_CASE(b_testing)
+BOOST_AUTO_TEST_CASE(divide)
 {
 
-	std::istringstream xstr("1/2");
-	std::istringstream ystr("1/2");
+	std::istringstream n1("1/10");
+	std::istringstream n2("1/10");
 
-	Rational x, y;
-	xstr >> x;
-	ystr >> y;
+	Rational a, b;
+	n1 >> a;
+	n2 >> b;
 
 	Rational result = Rational("1");
 
 	// Check equality of the results of two expressions
-	BOOST_CHECK_EQUAL((x / y), result);
+	BOOST_CHECK_EQUAL((a / b), result);
 
 }
